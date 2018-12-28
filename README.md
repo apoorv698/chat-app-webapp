@@ -1,3 +1,3 @@
-## Chat-App-Webapp
+# Chat-App-Webapp
 
-# Developed on Google App Engine with a secured backend
+## Developed on Google App Engine with a secured backend
