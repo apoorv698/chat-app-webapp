@@ -1,0 +1,8 @@
+{% extends "BASE.HTML" %}
+
+{% block content %}
+		<center>
+		<a href="login.html">LOGIN</a></center>
+		<center>
+		<a href="signin.html">SIGNIN</a></center>
+{% endblock %}

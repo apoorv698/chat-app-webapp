@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Chat and Enjoy</TITLE>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="refresh" content="14">
+		<style>
+		.error {color:red}
+		.fix-div{position:fixed; z-index:3; }
+		#wrapper{position:relative; z-index:2; left:0%; top:0%}
+		.header {background-color: #80bfff; padding: 20px; color:white; size:20px; font-size:30px}
+		.footer {background-color: #80bfff; padding: 20px; color:white; size:20px; font-size:10px}
+		</style>
+		<script type="text/javascript">
+			 function preventBack(){window.history.forward();}
+    		setTimeout("preventBack()", 0);
+		    window.onunload=function(){null};
+			$('#send').click(function(event){ 
+			$("#wrapper").load();}); 
+		</script> 
+	</HEAD>
+	<BODY>
+	<div class="header">
+		<img src="https://icons.iconarchive.com/icons/everaldo/crystal-clear/72/App-chat-icon.png"  height=60px width=60px alt="icon2"/>
+		<b>Chat App </b>
+	</div>
+		<br>
+		<h2> Welcome, {{username}} <span style="float:right"> <a href="/">Logout</a></span></h2>
+	<div class="fix-div" align="right">	
+		<form method="post">
+			<table width=100%><tr>
+				<td width="300"><input type="text" name="msg" autofocus  style="display:table-cell; width:280px"maxlength="240" value={{msg}} ></td>
+				<td><input type="image" src="http://www.jemome.com/cdn/2012/08/sendmessage-icon_2457006.png" width="22" height="22" name="Send" alt="Send"></td>
+			<tr></table>
+			<div class ="error">{{error}}</div>
+		</form>
+		<br>
+	</div>
+	<br>
+	<br>
+	<div  id="wrapper">	
+	<p> Last Messages in desc order... </p>
+		{% for mg in msgs %}
+				<div class="mg-username">{{mg.username}}  -  <span>{{mg.created}}</span></div>
+				<div class="mg-msg">{{mg.msg}}</div>
+				<br>
+		{% endfor%}
+	</div>
+	
+    <div class="footer">
+		 <FOOTER>
+		<P ALIGN="RIGHT"> CREATED BY: METAREXX(AS)</P><BR>
+		</FOOTER>
+		</div>
+	</BODY>
+</HTML>

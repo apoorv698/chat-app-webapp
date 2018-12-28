@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE> Welcome|SignUp </TITLE>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css">
+	  .header {background-color: #80bfff; padding: 10px; color:white; size:20px; font-size:30px; padding-bottom:40px; padding-top:40px}
+	  .footer {background-color: #80bfff; padding: 20px; color:white; size:20px; font-size:10px}
+	  .form-input{position: relative; top:50%; left:32%; margin:20px }
+    </style>
+	</HEAD>
+	<BODY>
+	<div class="header">
+		<img src="http://icons.iconarchive.com/icons/everaldo/crystal-clear/72/App-chat-icon.png"  style="height:60vp width:60vp" alt="icon2"/>
+		<b>Chat App </b>
+	</div>
+    <style type="text/css">
+      .label {text-align: right}
+      .error {color: red}
+    </style>
+	<h3 style="color:#80bfff">SignUp For free!!</h3>
+    <div class="form-input">
+    <form method="post">
+      <table>
+			
+        <tr>
+          <td class="label">
+            Username
+          </td>
+          <td>
+            <input type="text" name="username" autofocus value="{{username}}">
+          </td>
+		  <td>
+		  <a title="Atleast 3 Character comprising numbers and alphabets."> Rules for writing Username</a>
+		  </td>
+          <td class="error">
+            {{error_username}}
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Password
+          </td>
+          <td>
+            <input type="password" name="password" value="">
+          </td>
+		  <td>
+		  <a title="Atleast 3 Character comprising numbers and alphabets and should be hard to guess!!"> Rules for writing Password </a>
+		  </td>
+          <td class="error">
+            {{error_password}}
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Verify Password
+          </td>
+          <td>
+            <input type="password" name="verify" value="">
+          </td>
+		  <td>
+		  <a title="Atleast 3 Character comprising numbers and alphabets and most importantly same as above!!"> Rules for writing Verify Password </a>
+		  </td>
+          <td class="error">
+            {{error_verify}}
+          </td>
+        </tr>
+		
+		<tr>
+			<td>
+			&nbsp;
+			</td>
+			<td>
+				<center><input type="submit" value="Signin"></center>
+			</td>
+      </table>
+    </form>
+	</div>
+<div class="footer">
+		 <FOOTER>
+		<P ALIGN="RIGHT"> CREATED BY: METAREXX(AS)</P><BR>
+		</FOOTER>
+		</div>
+	</BODY>
+</HTML>
