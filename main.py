@@ -110,12 +110,17 @@ def lastMessages(update=False):
 		memcache.set(key,msgs)
 	return msgs
 
+
+
 # hash function for hashing message
 def hash_message(message_text):
 	hash_message=""
+	not_alpha= re.compile("[^a-zA-Z0-9]")
 	for i in message_text:
-		if i==' ':
-			hash_message+=' '
+		if i==' 'or not_alpha.match(i):
+			hash_message+=i
+		elif ord(i)<60:
+			hash_message+=str((int(i)+5)%10)
 		elif ord(i)>95:
 			if (ord(i)+13)<122:
 				hash_message+=chr((ord(i)+13))
